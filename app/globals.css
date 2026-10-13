@@ -47,3 +47,112 @@
 @media(max-width:900px){.public-hero{grid-template-columns:1fr;gap:33px;padding:54px 22px}.public-hero-copy{max-width:740px}.public-lab{max-width:760px;width:100%;justify-self:center}.public-path-heading{align-items:flex-start;flex-direction:column;gap:8px}.public-path-heading>p{max-width:720px}}
 @media(max-width:640px){.public-home{font-size:15px}.public-nav{padding:10px 14px;gap:8px}.public-nav nav{display:none}.public-brand{margin-right:auto}.public-wordmark{font-size:20px}.public-brand>span:last-child{font-size:10px}.public-actions{gap:6px}.public-theme-btn{width:39px;height:39px}.language-toggle button{min-width:33px;min-height:32px}.public-login{min-height:40px;padding:7px 9px;font-size:11px}.public-hero{padding:40px 16px 48px;gap:26px}.public-hero-copy h1{font-size:clamp(37px,11vw,48px);letter-spacing:-1.2px}.public-hero-copy>p:not(.eyebrow){font-size:16px}.public-hero-actions{align-items:stretch;flex-direction:column}.public-hero-actions a{width:100%}.public-checks{gap:9px 13px;font-size:12px}.public-lab{padding:10px}.public-lab-header{font-size:10px}.public-demo-status{align-items:stretch;flex-direction:column}.public-demo-buttons{display:grid;grid-template-columns:1fr 1fr}.public-demo-buttons button{min-height:44px}.public-path{padding:38px 16px}.public-path-heading h2{font-size:25px}.public-path-heading>p{font-size:14px}.public-roadmap{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:19px}.public-roadmap>a{min-height:120px;padding:13px}.public-roadmap h3{font-size:14px}.public-path-cta{align-items:flex-start;flex-direction:column}.public-footer{grid-template-columns:1fr;padding:22px 16px}.public-footer>small{grid-column:auto}.footer-links{gap:5px 15px}.footer-links>a{font-size:12px}.legal-nav{padding:12px 15px}.legal-document{margin:18px 12px 26px;padding:25px 20px}.legal-document h1{font-size:30px}.legal-intro{font-size:15px!important}.legal-document section p{font-size:14px}.legal-footer{justify-content:flex-start;padding:18px 15px}}
 @media(max-width:370px){.public-actions{gap:4px}.public-login{font-size:10px;padding:6px}.public-theme-btn{width:35px;height:38px}.public-brand .public-wordmark{font-size:18px}.public-roadmap{grid-template-columns:1fr}}
+
+/* FEBRO NEO v0.1 — electrical engineering UI, do not change canvas geometry */
+:root{--neo-ink:#1d2d40;--neo-shadow:4px 4px 0 #1d2d40;--bg:#f3f8ff;--surface:#fff;--surface2:#ebf3ff;--text:#1d2d40;--muted:#607187;--line:#8ca3c0;--blue:#3f80d8;--blue-light:#dfebff;--sidebar:#1c3043;--sidebar-text:#d0dded;--shadow:none}
+:root[data-theme=dark]{--neo-ink:#ecf3fa;--neo-shadow:4px 4px 0 #89a4c7;--bg:#121c26;--surface:#1c2936;--surface2:#26394a;--text:#eff4fb;--muted:#bdc9d8;--line:#627891;--blue:#82b7f7;--blue-light:#293f57;--sidebar:#101d2b;--sidebar-text:#bdcfe2;--shadow:none}
+body{font-family:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif}
+:is(h1,h2,h3){font-family:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;font-weight:750;letter-spacing:-.05em}
+.sidebar{border-right:2px solid var(--line)}
+.brand-mark{border:2px solid #b4cff3;border-radius:11px;background:#314d69}
+.nav-item{min-height:45px;border-radius:10px;border:2px solid transparent;font-weight:620}
+.nav-item.active{border-color:#b2c9e4;background:#304f6b;color:#fff}
+.nav-item:hover{background:#314b60;color:#fff}
+.topbar{border-bottom:2px solid var(--line)}
+.btn{border:2px solid var(--line);border-radius:11px;font-weight:710;min-height:40px;transition:transform .15s ease,background-color .15s ease,box-shadow .15s ease}
+.btn.primary{border-color:var(--neo-ink);box-shadow:3px 3px 0 var(--neo-ink);background:#3f80d8;color:#fff}
+:root[data-theme=dark] .btn.primary{color:#0e2036}
+.btn.primary:hover{filter:none;transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--neo-ink)}
+.btn.primary:active{transform:translate(2px,2px);box-shadow:none}
+.btn.run{border:2px solid #285e48;box-shadow:2px 2px 0 #285e48}
+:is(input,textarea,select){border-width:2px;border-radius:10px;min-height:41px}
+:is(button,a,input,textarea,select):focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+:is(.panel,.stat-card,.course-card,.challenge-card,.circuit-card,.calculator-card,.catalog-card,.lesson-card){border:2px solid var(--line);border-radius:14px;box-shadow:none}
+:is(.course-card,.challenge-card,.circuit-card):hover{border-color:var(--neo-ink)}
+/* Simulator uses measured coordinate transforms and SVG terminals: preserve view, wires and canvas sizing. */
+.circuit-canvas,.panel-view{border-color:var(--line)}
+.inspector{border-left-color:var(--line)}
+.terminal-list span{border-color:var(--line)}
+.public-home{--public-bg:#f3f8ff;--public-paper:#fff;--public-ink:#1d2d40}
+.public-home.public-dark{--public-bg:#141e2c;--public-paper:#202e3d;--public-ink:#ecf3fb}
+.public-nav{border-bottom:2px solid var(--neo-ink)}
+.public-brand .public-wordmark{font-weight:850;letter-spacing:-.06em}
+.public-hero-copy h1{font-weight:850;line-height:1.05;letter-spacing:-.07em}
+.public-lab{border:2px solid var(--neo-ink);border-radius:16px;box-shadow:5px 5px 0 var(--neo-ink)}
+.public-demo-canvas{border-radius:11px}
+.public-hero-actions a,.public-login,.public-demo-buttons button,.public-path-cta a{border:2px solid var(--neo-ink);border-radius:12px;min-height:44px}
+.public-hero-actions a:first-child{box-shadow:3px 3px 0 var(--neo-ink)}
+.public-roadmap>a{border:2px solid var(--neo-ink);border-radius:13px;box-shadow:none}
+.public-roadmap>a:nth-child(4n + 2){background:#e7f2fa}
+.public-dark .public-roadmap>a:nth-child(4n + 2){background:#2b4050}
+.public-roadmap>a:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--neo-ink)}
+.login-intro{background:#203a52}
+.login-form :is(input,button,.btn){border-radius:12px}
+.legal-document{border:2px solid var(--line);border-radius:15px}
+@media(max-width:760px){.public-lab{box-shadow:3px 3px 0 var(--neo-ink)}.public-roadmap>a:hover{transform:none;box-shadow:none}.sidebar{border-right-color:var(--line)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* FEBRO NEO MOBILE TOOLBAR v0.1
+ * Presentation-only adjustment. Never change the circuit canvas transforms. */
+@media (max-width: 550px) {
+  .sim-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    height: auto;
+    min-height: 103px;
+    gap: 8px;
+    padding: 9px 10px 12px;
+  }
+
+  .sim-toolbar .tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+
+  .sim-toolbar .tools .icon-btn {
+    flex: 0 0 36px;
+    width: 36px;
+    min-width: 36px;
+    height: 40px;
+    padding: 7px;
+  }
+
+  .sim-toolbar .run-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .sim-toolbar .run-tools select {
+    flex: 1 1 82px;
+    min-width: 70px;
+    max-width: 128px;
+    width: auto;
+    min-height: 43px;
+    font-size: 12px;
+  }
+
+  .sim-toolbar .run-tools .btn {
+    flex: 0 0 auto;
+    min-height: 42px;
+    min-width: 74px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .sim-toolbar .run-tools .btn.run {
+    margin-right: 4px;
+  }
+}
+
